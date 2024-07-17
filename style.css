@@ -2,121 +2,191 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-
   font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
 }
 
 .main {
   width: 100%;
+  overflow: hidden;
 }
-
-/* INICIO CONTENEDOR 1 */
-/* INICIO CONTENEDOR 1 */
-/* INICIO CONTENEDOR 1 */
 
 .contenedor-1 {
   width: 100%;
-  height: 100vh;
-  /* background-image: url(assets/fondo2.png); */
-  background-color: #1e453e;
-background-image: linear-gradient(314deg, #1e453e 0%, #182c25 74%);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
 
-  
-  }
 .cabecera {
   background-image: url(assets/header.png);
   width: 100%;
-  height: 15%;
+  height: 16vh;
   display: flex;
+  align-items: center; /* Alinea verticalmente el contenido */
+  justify-content: space-between; /* Distribuye elementos uniformemente */
+  padding: 0 1%; /* Ajusta el padding según sea necesario */
   overflow: hidden;
 }
+
 .logo {
-  width: 70%;
-  padding-left: 1%;
+  width: auto; /* Ajusta el ancho según sea necesario */
+  box-sizing: border-box;
+  margin-top: -27px; /* Ajusta la distancia hacia arriba según sea necesario */
 }
 
+
 .navegacion {
-  width: 30%;
   display: flex;
-  justify-content: right;
   align-items: center;
-  padding-right: 1%;
 }
+
+.navegacion a {
+  margin-left: 10px; /* Espacio entre enlaces, ajusta según necesites */
+}
+
 .link {
   color: #fff;
-  padding: 70px 30px;
+  padding: 10px 20px;
   text-decoration: none;
   font-size: 18px;
 }
+
 .link:hover {
   background-color: #dddddd02;
 }
+
 .banner {
   color: #fff;
   width: 100%;
   height: calc(100vh - 150px);
   display: flex;
-  justify-content: start;
+  justify-content: space-between;
   align-items: center;
+  position: relative;
 }
+
 .banner_textos {
   padding-left: 3%;
   width: 50%;
   display: flex;
   flex-direction: column;
 }
+
 .banner_textos h1 {
   font-size: 75px;
 }
 
 .banner_textos p {
   font-size: 24px;
-  margin: 20px 0px 70px 0px;
-}
-.banner_textos a {
-  padding-left: 10%;
-  background-color: #ff0303;
-  width: 40%;
-  text-align: center;
-  padding: 20px 10px;
-  text-decoration: none;
-  font-size: 24px;
-  color: #fff;
-  border-radius: 20px;
+  margin: 20px 0 70px;
 }
 
-.banner_textos a:hover {
-  padding: 20px 10px;
-  background-color: #fff;
-  color: #ff0000;
-  transition: 0.6s;
+.banner_logo {
+  padding-top: 13.8%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%; /* Ajusta el ancho del banner según tus necesidades */
+  max-height: 100%;
+  height: 100%; /* Ajusta la altura del banner según tus necesidades */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.1; /* Ajusta la opacidad según tus necesidades */
 }
 
-.ProductosEPICOS {
+.banner_logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+.boton-elegante {
+  padding: 15px 30px;
+  border: 2px solid #2c2c2c;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: all 0.4s ease;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  font-weight: bold;
+  width: 400px;
+}
+
+.boton-elegante::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 100vh;
-  background-image: url(assets/fondo2.png);
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 70%);
+  transform: scale(0);
+  transition: transform 0.5s ease;
 }
 
+.boton-elegante:hover::after {
+  transform: scale(4);
+}
 
+.boton-elegante:hover {
+  border-color: #666666;
+  background: #292929;
+}
 
-/* INICIO CONTENEDOR 2 */
-/* INICIO CONTENEDOR 2 */
-/* INICIO CONTENEDOR 2 */
-.contenedor-2 {
-  color: #fff;
-  width: 100%;
-  height: 70vh;
+.foto_img {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url(assets/fondo22.png);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
 }
+
+.foto_img:hover {
+  transform: scale(1.1);
+}
+
+.foto_img img {
+  max-width: 100%;
+  height: auto;
+}
+
+.foto_img h3 {
+  margin: 10px 0;
+}
+
+.foto_img p {
+  font-size: 12px;
+}
+
+/* INICIO CONTENEDOR 2 */
+.contenedor-2 {
+  color: #fff;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url('assets/WindingoFondo1Blur.jpg');
+  background-size: cover; /* Hace que la imagen de fondo cubra todo el contenedor */
+  background-position: center; /* Centra la imagen de fondo */
+  background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+}
+
 
 .text {
   color: #fff;
-  width: 70%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -130,56 +200,77 @@ background-image: linear-gradient(314deg, #1e453e 0%, #182c25 74%);
   justify-content: space-between;
   margin-top: 50px;
 }
+
 .foto_img {
+  width: 70%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   position: relative;
   overflow: hidden;
   transition: transform 0.3s ease;
 }
-  .foto_img:hover {
-    transform: scale(1.1);
-}
-.foto_img h3 {
-  margin: 10px 0;
-}
-.text p {
-  margin-top: 18px;
-  font-size: 22px;
+
+.foto_img:hover {
+  transform: scale(1.1);
 }
 
-/* INICIO CONTENEDOR 3 */
-/* INICIO CONTENEDOR 3 */
+.foto_img h3 {
+  margin: 10px 0;
+  position: relative; /* Añadido para alinear el icono */
+}
+
+.foto_img h3:before {
+  content: ''; /* Añadimos contenido vacío para el ícono */
+  display: inline-block; /* Hacemos que sea un bloque en línea */
+  width: 20px; /* Ancho del ícono */
+  height: 20px; /* Alto del ícono */
+  background-image: url('assets/badge-check-solid-24.png'); /* Ruta de tu icono */
+  background-size: cover; /* Ajustamos el tamaño del ícono */
+  margin-right: 100px; /* Espacio entre el ícono y el texto */
+  position: absolute; /* Posicionamos absolutamente para alinear correctamente */
+  left: -25px; /* Ajustamos la posición a la izquierda del texto */
+  top: 50%; /* Centramos verticalmente */
+  transform: translateY(-50%); /* Ajustamos para centrar verticalmente */
+}
+
+.text p {
+  margin-top: 18px;
+  font-size: 12px;
+}
+
 /* INICIO CONTENEDOR 3 */
 .contenedor-3 {
   color: #fff;
   width: 100%;
-  height: 80vh;
+  height: 100vh;
   background-image: url(assets/fondo2.png);
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 50px 0%;
+  padding: 50px 0;
 }
+
 .contenedor-3_img {
-  width: 30%;
-  padding-right: 40%;
+  width: 45%;
+  padding-right: 20%;
 }
 .contenedor-3_text {
   width: 35%;
 }
+
 .contenedor-3_text h2 {
   font-size: 50px;
 }
+
 .contenedor-3_text p {
   margin-top: 11%;
   margin-bottom: 11%;
   font-size: 26px;
 }
+
 .contenedor-3_text a {
   background-color: firebrick;
   border-radius: 20px;
@@ -188,60 +279,105 @@ background-image: linear-gradient(314deg, #1e453e 0%, #182c25 74%);
   text-decoration: none;
   color: #fff;
 }
+
 .contenedor-3_text a:hover {
   background-color: #fff;
   color: firebrick;
   transition: 0.5s;
 }
 
-
-/* INICIO CONTENEDOR 4 */
-/* INICIO CONTENEDOR 4 */
 /* INICIO CONTENEDOR 4 */
 .contenedor-4 {
   color: #fff;
   width: 100%;
-  height: 70vh;
-  /* background-image: url(assets/fondo2.png); */
+  min-height: 100vh;
+  background-image: url('assets/fondo2.png');
   background-color: #609966;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  padding: 30px 0%;
+  padding: 30px 5%;
+  box-sizing: border-box;
 }
+
+.contenedor-4_texto {
+  max-width: 45%;
+  position: relative; /* Añadimos posición relativa para posicionar el ícono */
+}
+
+.contenedor-4_texto h1 {
+  margin-bottom: 20px;
+  font-size: 2.5em;
+  font-weight: 300; /* Fuente más ligera */
+}
+
+.contenedor-4_texto h3 {
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  font-weight: 300; /* Fuente más ligera */
+}
+
+.contenedor-4_texto h5 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  position: relative; /* Añadimos posición relativa para posicionar el ícono */
+  padding-left: 30px; /* Espacio para el ícono */
+  font-weight: 300; /* Fuente más ligera */
+}
+
+
+
+.contenedor-4_texto h5:before {
+  content: ''; /* Añadimos contenido vacío para el ícono */
+  display: inline-block; /* Hacemos que sea un bloque en línea */
+  width: 20px; /* Ancho del ícono */
+  height: 20px; /* Alto del ícono */
+  background-image: url('assets/check-regular-24.png'); /* URL del ícono */
+  background-size: cover; /* Ajustamos el tamaño del ícono */
+  position: absolute; /* Posicionamos absolutamente para alinear correctamente */
+  left: 0; /* Ajustamos la posición a la izquierda del texto */
+  top: 50%; /* Centramos verticalmente */
+  transform: translateY(-50%); /* Ajustamos para centrar verticalmente */
+  margin-right: 10px; /* Espacio entre el ícono y el texto */
+}
+
 .contenedor-4_img {
-  width: 50%;
-  padding-left: 10%;
+  max-width: 80%; /* Ajustado para dar más espacio a la imagen */
+  width: 100%; /* Asegura que la imagen ocupe todo el ancho disponible */
+  padding-left: 5%;
   position: relative;
   overflow: hidden;
   transition: transform 0.3s ease;
 }
-.contenedor-4_texto h1 {
-  padding-bottom: 60px;
-  font-size: 20px;
-  width: 100%;
-}
+
 .contenedor-4_img:hover {
   transform: scale(1.1);
 }
-.contenedor-4_texto p {
-  padding-left: 5%;
-  font-size: 25px;
+
+.contenedor-4_img img {
+  max-width: 100%;
+  height: auto;
 }
+
 
 /* INICIO CONTENEDOR 5 */
 /* INICIO CONTENEDOR 5 */
 /* INICIO CONTENEDOR 5 */
+
 .contenedor-5 {
   color: #fff;
   width: 100%;
-  height: 50vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  background-image: url(assets/fondo2.png);
+  max-width: 100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
+
 }
+
 .contenedor-5_texto {
   width: 50%;
   height: 30%;
@@ -250,45 +386,80 @@ background-image: linear-gradient(314deg, #1e453e 0%, #182c25 74%);
   justify-content: center;
   align-items: center;
 }
+
 .contenedor-5_texto h2 {
+  padding-top: 10%;
   font-size: 50px;
 }
+
 .contenedor-5_texto p {
   font-size: 30px;
 }
+
 .contenedor-5_data {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   width: 70%;
-  height: 32.5%;
 }
+
 .data {
-  background-color: #9dc08b;
-  width: 13%;
-  height: 100%;
+  border-radius: 50%;
+  background: linear-gradient(225deg, #4dd63115, #2d7a1e28);
+  box-shadow: -1px 1px 64px #64f347, 10px -5px 120px #2d7a1e5d;
+  width: 200px;
+  height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 100%;
-  border: solid #fff 3px;
 }
+
 .contenedor-5_data h3 {
   font-size: 200%;
 }
+
 .contenedor-5_data p {
   font-size: 120%;
 }
+
 .contenedor-5_texto h2 {
   font-size: 70px;
   padding-bottom: 5%;
 }
+
 .contenedor-5_texto p {
-  margin: 15px 10;
+  margin: 15px 10px;
   padding-bottom: 5%;
 }
+
+.imagenes {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Cambiado para que las imágenes se alineen arriba */
+  width: 70%;
+  padding-top: 20px;
+}
+
+.imagenes > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagenes img {
+  width: 400px; /* Aumentado el tamaño de las imágenes */
+  height: auto;
+}
+
+.predi {
+padding-left: -50%;
+}
+
+
+
+
+
 
 /* INICIO CONTENEDOR 6 */
 /* INICIO CONTENEDOR 6 */
@@ -297,7 +468,7 @@ background-image: linear-gradient(314deg, #1e453e 0%, #182c25 74%);
 .contenedor-6 {
   color: #fff;
   width: 100%;
-  height: 85vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -416,19 +587,51 @@ background-image: linear-gradient(314deg, #1e453e 0%, #182c25 74%);
   font-size: 18px;
   font-weight: 300;
 }
+
+
 .contenedor-6_liga a {
-  background-color: rgb(109, 129, 104);
-  color: #fff;
-  width: 74%;
-  height: 40px;
-  border-radius: 10px;
-  text-decoration: none;
+  padding: 15px 30px;
+  border: 2px solid #2c2c2c;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: all 0.4s ease;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  font-weight: bold;
+  width: 200px;
+  text-align: center; /* Centra el texto horizontalmente */
   display: flex;
-  justify-content: center;
   align-items: center;
-  font-size: 20px;
-  font-weight: 600;
+  justify-content: center;
+  text-decoration: none; /* Quita el subrayado del enlace */
 }
+
+.contenedor-6_liga a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 70%);
+  transform: scale(0);
+  transition: transform 0.5s ease;
+}
+
+.contenedor-6_liga a:hover::after {
+  transform: scale(4);
+}
+
+.contenedor-6_liga a:hover {
+  border-color: #666666;
+  background: #292929;
+}
+
+
 
 /* INICIO CONTENEDOR 7 */
 /* INICIO CONTENEDOR 7 */
@@ -704,3 +907,332 @@ tr:nth-child(even) {
   transition: 0.5s;
 }
 
+
+
+@-webkit-keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: .6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: .6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.tracking-in-expand {
+  -webkit-animation: tracking-in-expand 1s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+  animation: tracking-in-expand 1s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
+
+.gradient {
+
+    background: linear-gradient(334deg, #0a3a15, #1e453e, #609966);
+    background-size: 180% 180%;
+    animation: gradient-animation 4s ease infinite; /* Ajustar la duración a 4 segundos */
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.slide-in-br {
+	-webkit-animation: slide-in-br 0.85s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-br 0.85s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes slide-in-br {
+  0% {
+    -webkit-transform: translateY(1000px) translateX(1000px);
+            transform: translateY(1000px) translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0) translateX(0);
+            transform: translateY(0) translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-br {
+  0% {
+    -webkit-transform: translateY(1000px) translateX(1000px);
+            transform: translateY(1000px) translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0) translateX(0);
+            transform: translateY(0) translateX(0);
+    opacity: 1;
+  }
+}
+
+
+
+.slide-in-bl {
+	-webkit-animation: slide-in-bl 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-bl 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+
+@-webkit-keyframes slide-in-bl {
+  0% {
+    -webkit-transform: translateY(1000px) translateX(-1000px);
+            transform: translateY(1000px) translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0) translateX(1000);
+            transform: translateY(0) translateX(1000);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-bl {
+  0% {
+    -webkit-transform: translateY(1000px) translateX(-1000px);
+            transform: translateY(1000px) translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0) translateX(0);
+            transform: translateY(0) translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-in-bottom {
+	-webkit-animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+ @-webkit-keyframes slide-in-bottom {
+  0% {
+    -webkit-transform: translateY(1000px);
+            transform: translateY(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-bottom {
+  0% {
+    -webkit-transform: translateY(1000px);
+            transform: translateY(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+/* ///////////////////////////////////////// GALERIA /////////////////////////////////////////////
+/* ///////////////////////////////////////// GALERIA /////////////////////////////////////////////
+/* ///////////////////////////////////////// GALERIA /////////////////////////////////////////////
+/* ///////////////////////////////////////// GALERIA /////////////////////////////////////////////
+/* ///////////////////////////////////////// GALERIA ////////////////////////////////////////////*/
+
+
+/* Estilos generales */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+img {
+  width: 100%;
+  display: block; /* Asegura que las imágenes no tengan espacio debajo */
+}
+
+.row {
+  display: flex;
+  padding: 5px;
+  flex-wrap: wrap;
+}
+
+.column {
+  flex: 25%;
+  padding: 5px;
+}
+
+.column img {
+  margin-top: 5px;
+  transition: transform 0.3s ease; /* Añade transición suave para el efecto */
+}
+
+/* Efecto de hover */
+.column img:hover {
+  transform: scale(1.02); /* Aumenta el tamaño de la imagen al pasar el cursor ligeramente */
+}
+
+@media (max-width: 800px) {
+  .column {
+    flex: 50%;
+  }
+}
+
+@media (max-width: 600px) {
+  .column {
+    flex: 100%;
+  }
+}
+
+.contenedor-10 {
+  width: 100%;
+}
+
+.contenedor-11 {
+  position: relative;
+  overflow: hidden;
+  height: 50vh; /* Ajusta la altura del contenedor según tus necesidades */
+}
+
+.contenedor-11::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('assets/FotoPro5.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  filter: blur(10px); /* Aplica el desenfoque */
+  z-index: -1; /* Asegúrate de que el pseudo-elemento esté detrás del contenido del contenedor */
+}
+
+.contenedor-11 img {
+  position: relative;
+  z-index: 1; /* Asegúrate de que la imagen esté por delante del pseudo-elemento */
+  max-width: 100%;
+  height: auto; /* Ajusta la imagen para que se mantenga dentro del contenedor */
+}
+
+
+
+/* ///////////////////////////////////////// LISTA /////////////////////////////////////////////
+/* ///////////////////////////////////////// LISTA /////////////////////////////////////////////
+/* ///////////////////////////////////////// LISTA /////////////////////////////////////////////
+/* ///////////////////////////////////////// LISTA /////////////////////////////////////////////
+/* ///////////////////////////////////////// LISTA ////////////////////////////////////////////*/
+
+.tablaLista body {
+  overflow-y: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+
+.contenedor-21 {
+  overflow: hidden;
+  height: 10vh; /* Ajusta la altura del contenedor según tus necesidades */
+  width: 100%;
+}
+
+.section-lista {
+  background-color: #fff;
+  padding: 20px;
+  position: relative;
+  height: 100vh; /* Asegura que la sección ocupe toda la altura visible */
+}
+
+.section-lista h1, .section-lista h4 {
+  text-align: center;
+}
+
+.tablaLista {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.tablaLista th, .tablaLista td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+.tablaLista th {
+  background-color: #333;
+  color: #fff;
+  align-items: center; /* Alinea verticalmente iconos con texto */
+  padding: 10px;
+  text-align: left;
+}
+
+
+
+.tablaLista th img {
+  margin-right: 10px; /* Ajusta el espacio entre el icono y el texto */
+  width: 20px; /* Ajusta el tamaño del icono según sea necesario */
+  height: 20px;
+}
+
+.tablaLista th span {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 5px; /* Ajusta el espacio entre el icono y el texto */
+}
+
+.botonesLista {
+  position: absolute;
+  
+  bottom: 170px; /* Ajusta esta propiedad para mover los botones más abajo */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 100%; /* Asegura que los botones ocupen el ancho completo de su contenedor */
+}
+
+.boton-Agregar, .boton-Borrar {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-right: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.boton-Agregar:hover, .boton-Borrar:hover {
+  background-color: #45a049;
+}
